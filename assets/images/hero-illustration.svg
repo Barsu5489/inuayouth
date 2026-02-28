@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+
+  <!-- Background glow where fingers meet -->
+  <circle cx="300" cy="195" r="80" fill="#c8956c" opacity="0.04"/>
+  <circle cx="300" cy="195" r="50" fill="#c8956c" opacity="0.07"/>
+  <circle cx="300" cy="195" r="25" fill="#c8956c" opacity="0.12"/>
+
+  <!-- === LEFT: DONOR/SPONSOR HAND (adult, reaching right) === -->
+  <g transform="translate(0, 0)">
+    <!-- Forearm -->
+    <path d="M30 220 C30 200, 50 175, 80 168 L150 155 C165 152, 175 155, 180 162"
+      fill="#e8c9a8" stroke="#443" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Palm -->
+    <path d="M150 155 C165 150, 185 148, 200 155 L215 163 C225 168, 232 178, 230 190 L225 210 C222 225, 210 235, 195 232 L160 222 C140 218, 130 205, 135 188 L150 155Z"
+      fill="#e8c9a8" stroke="#443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Thumb -->
+    <path d="M155 215 C148 225, 145 240, 155 248 C162 254, 172 250, 175 240 L180 225"
+      fill="#e8c9a8" stroke="#443" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Index finger (reaching) -->
+    <path d="M215 163 C225 158, 240 155, 255 158 C262 160, 270 165, 275 172 C278 178, 278 185, 275 190"
+      fill="#e8c9a8" stroke="#443" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Middle finger -->
+    <path d="M222 170 C232 162, 248 155, 262 152 C270 150, 275 154, 274 162 C273 168, 268 175, 260 180"
+      fill="#e8c9a8" stroke="#443" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Ring finger -->
+    <path d="M226 180 C235 172, 248 166, 258 165 C265 164, 268 168, 266 175 C264 182, 258 188, 250 190"
+      fill="#e8c9a8" stroke="#443" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Pinky -->
+    <path d="M228 192 C234 186, 243 182, 250 182 C256 182, 258 187, 255 193 C252 198, 245 202, 238 202"
+      fill="#e8c9a8" stroke="#443" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Finger details -->
+    <path d="M240 160 L245 157" stroke="#d4a87a" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+    <path d="M250 167 L254 165" stroke="#d4a87a" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+    <!-- Sleeve cuff -->
+    <path d="M25 235 C25 210, 45 185, 80 175" stroke="#443" stroke-width="2.5" stroke-linecap="round" opacity="0.15"/>
+    <path d="M30 220 C38 210, 55 195, 80 188" stroke="#443" stroke-width="1.2" stroke-linecap="round" opacity="0.08" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- === RIGHT: CHILD'S HAND (smaller, reaching left) === -->
+  <g transform="translate(0, 0)">
+    <!-- Forearm -->
+    <path d="M570 230 C565 210, 545 190, 520 183 L465 172 C452 170, 442 173, 438 178"
+      fill="#a0714a" stroke="#443" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Palm (smaller, darker skin) -->
+    <path d="M465 172 C452 168, 435 167, 422 172 L410 178 C402 182, 396 190, 398 200 L402 215 C404 228, 414 235, 428 232 L456 225 C472 222, 480 210, 476 196 L465 172Z"
+      fill="#a0714a" stroke="#443" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Thumb -->
+    <path d="M460 228 C465 236, 467 248, 459 254 C453 258, 445 254, 443 246 L440 233"
+      fill="#a0714a" stroke="#443" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Index finger (reaching, smaller) -->
+    <path d="M410 178 C400 174, 388 172, 375 174 C368 176, 362 180, 328 192 C324 194, 322 198, 325 202"
+      fill="#a0714a" stroke="#443" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Middle finger -->
+    <path d="M404 184 C395 178, 382 173, 370 172 C363 171, 360 175, 362 182 C363 187, 368 192, 374 195"
+      fill="#a0714a" stroke="#443" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Ring finger -->
+    <path d="M400 193 C393 187, 382 182, 374 182 C368 182, 366 186, 368 192 C370 198, 376 203, 383 204"
+      fill="#a0714a" stroke="#443" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Pinky -->
+    <path d="M401 204 C396 199, 388 196, 382 197 C377 198, 376 202, 378 207 C380 211, 386 214, 392 213"
+      fill="#a0714a" stroke="#443" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Finger details -->
+    <path d="M385 175 L380 174" stroke="#8a5f3c" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+  </g>
+
+  <!-- === THE SPARK — where fingers almost touch === -->
+  <!-- Central glow -->
+  <circle cx="300" cy="192" r="12" fill="#c8956c" opacity="0.25">
+    <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.25;0.45;0.25" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="300" cy="192" r="6" fill="#c8956c" opacity="0.5">
+    <animate attributeName="r" values="6;10;6" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Core bright point -->
+  <circle cx="300" cy="192" r="3" fill="#faf6f0" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Spark rays -->
+  <g stroke="#c8956c" stroke-width="1.5" stroke-linecap="round" opacity="0.4">
+    <line x1="300" y1="175" x2="300" y2="168">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="300" y1="209" x2="300" y2="216">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+    </line>
+    <line x1="312" y1="183" x2="318" y2="178">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite" begin="0.3s"/>
+    </line>
+    <line x1="288" y1="201" x2="282" y2="206">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite" begin="0.8s"/>
+    </line>
+    <line x1="314" y1="198" x2="320" y2="203">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2s" repeatCount="indefinite" begin="1s"/>
+    </line>
+    <line x1="286" y1="186" x2="280" y2="181">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2s" repeatCount="indefinite" begin="1.2s"/>
+    </line>
+  </g>
+
+  <!-- Floating particles from the spark -->
+  <circle cx="295" cy="170" r="2" fill="#c8956c" opacity="0.3">
+    <animate attributeName="cy" values="170;155;170" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="308" cy="165" r="1.5" fill="#c8956c" opacity="0.25">
+    <animate attributeName="cy" values="165;148;165" dur="5s" repeatCount="indefinite" begin="1s"/>
+    <animate attributeName="opacity" values="0.25;0.5;0.25" dur="5s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  <circle cx="302" cy="160" r="1.8" fill="#443" opacity="0.12">
+    <animate attributeName="cy" values="160;140;160" dur="4.5s" repeatCount="indefinite" begin="0.5s"/>
+    <animate attributeName="opacity" values="0.12;0.25;0.12" dur="4.5s" repeatCount="indefinite" begin="0.5s"/>
+  </circle>
+
+  <!-- Small floating hearts rising from spark -->
+  <path d="M290 155 C290 151, 294 148, 297 152 C300 148, 304 151, 304 155 C304 160, 297 164, 297 164 C297 164, 290 160, 290 155Z" fill="#c8956c" opacity="0.2">
+    <animate attributeName="opacity" values="0.2;0.45;0.2" dur="3.5s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0; -8,-20; 0,0" dur="5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M310 145 C310 142, 313 140, 315 143 C317 140, 320 142, 320 145 C320 149, 315 152, 315 152 C315 152, 310 149, 310 145Z" fill="#c8956c" opacity="0.15">
+    <animate attributeName="opacity" values="0.15;0.35;0.15" dur="4s" repeatCount="indefinite" begin="1.5s"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 10,-25; 0,0" dur="6s" repeatCount="indefinite" begin="1.5s"/>
+  </path>
+
+  <!-- Tiny sparkle stars -->
+  <g fill="#c8956c">
+    <path d="M270 150 L271.5 155 L276 156.5 L271.5 158 L270 163 L268.5 158 L264 156.5 L268.5 155Z" opacity="0.2">
+      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M335 160 L336 164 L340 165 L336 166 L335 170 L334 166 L330 165 L334 164Z" opacity="0.15">
+      <animate attributeName="opacity" values="0.15;0.4;0.15" dur="2.5s" repeatCount="indefinite" begin="1s"/>
+    </path>
+    <path d="M300 135 L301.5 140 L306 141 L301.5 142 L300 147 L298.5 142 L294 141 L298.5 140Z" opacity="0.18">
+      <animate attributeName="opacity" values="0.18;0.45;0.18" dur="3.5s" repeatCount="indefinite" begin="0.7s"/>
+    </path>
+  </g>
+
+  <!-- Subtle label text -->
+  <text x="120" y="280" font-family="Poppins, sans-serif" font-size="11" fill="#443" opacity="0.25" font-weight="500" letter-spacing="2">SPONSOR</text>
+  <text x="430" y="280" font-family="Poppins, sans-serif" font-size="11" fill="#443" opacity="0.25" font-weight="500" letter-spacing="2">CHILD</text>
+
+</svg>
