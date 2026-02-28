@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate | BetterMe+</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          gold:{50:'#fff9e6',100:'#fff0b3',200:'#ffe680',300:'#fcdb4d',400:'#fcb711',500:'#e5a200',600:'#b37e00'},
+          ocean:{50:'#e6f2fa',100:'#b3d9f0',200:'#80bfe6',300:'#4da6dc',400:'#1a8cd2',500:'#025ca7',600:'#024a86',700:'#013764',800:'#012543',900:'#001221'},
+          warm:{50:'#fdf8f3',100:'#f9ede0',200:'#f3dbc1'},
+          sage:{50:'#f0f5f0',100:'#d9e8d9',500:'#4a8c4a',600:'#3b703b'},
+        },
+        fontFamily: { sans:['Inter','system-ui','sans-serif'], serif:['Playfair Display','Georgia','serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="bg-warm-50 text-gray-800 font-sans antialiased">
+
+  <!-- Nav -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 scrolled">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-lg"><span class="text-white font-bold text-lg">B+</span></div>
+        <span class="font-serif font-bold text-xl text-white">BetterMe<span class="text-gold-400">+</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="../index.html#programs" class="text-sm font-medium text-white/80 hover:text-gold-400 transition">Programs</a>
+        <a href="sponsor.html" class="text-sm font-medium text-white/80 hover:text-gold-400 transition">Sponsor a Child</a>
+        <a href="community.html" class="text-sm font-medium text-white/80 hover:text-gold-400 transition">Community Impact</a>
+        <a href="volunteer.html" class="text-sm font-medium text-white/80 hover:text-gold-400 transition">Volunteer</a>
+        <a href="stories.html" class="text-sm font-medium text-white/80 hover:text-gold-400 transition">Stories</a>
+        <a href="donate.html" class="px-5 py-2.5 bg-gold-400 text-gray-900 rounded-full text-sm font-semibold">Donate Now</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden text-white"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-ocean-800/95 backdrop-blur-xl border-t border-white/10">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="../index.html#programs" class="text-white/80 py-2">Programs</a>
+        <a href="sponsor.html" class="text-white/80 py-2">Sponsor a Child</a>
+        <a href="community.html" class="text-white/80 py-2">Community Impact</a>
+        <a href="volunteer.html" class="text-white/80 py-2">Volunteer</a>
+        <a href="stories.html" class="text-white/80 py-2">Stories</a>
+        <a href="donate.html" class="text-center px-5 py-2.5 bg-gold-400 text-gray-900 rounded-full font-semibold">Donate Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="page-header pt-32 pb-20">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <p class="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-3">Every Dollar Counts</p>
+      <h1 class="text-4xl lg:text-6xl font-serif font-bold text-white mb-4">Make a Gift</h1>
+      <p class="text-white/60 text-lg max-w-2xl">94% of every donation goes directly to our programs. Your generosity transforms lives and communities.</p>
+    </div>
+  </section>
+
+  <!-- Donation Form -->
+  <section class="py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="grid lg:grid-cols-5 gap-8">
+        <!-- Form -->
+        <div class="lg:col-span-3">
+          <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl">
+            <h2 class="text-2xl font-serif font-bold text-gray-900 mb-6">Your Donation</h2>
+
+            <!-- Frequency -->
+            <div class="mb-6">
+              <label class="block text-sm font-medium text-gray-700 mb-3">Frequency</label>
+              <div class="grid grid-cols-2 gap-3">
+                <button onclick="this.classList.add('ring-2','ring-ocean-500','bg-ocean-50');this.nextElementSibling.classList.remove('ring-2','ring-ocean-500','bg-ocean-50')" class="py-3 rounded-xl border border-gray-200 text-sm font-semibold text-gray-700 hover:border-ocean-300 transition ring-2 ring-ocean-500 bg-ocean-50">Monthly</button>
+                <button onclick="this.classList.add('ring-2','ring-ocean-500','bg-ocean-50');this.previousElementSibling.classList.remove('ring-2','ring-ocean-500','bg-ocean-50')" class="py-3 rounded-xl border border-gray-200 text-sm font-semibold text-gray-700 hover:border-ocean-300 transition">One-Time</button>
+              </div>
+            </div>
+
+            <!-- Amount -->
+            <div class="mb-6">
+              <label class="block text-sm font-medium text-gray-700 mb-3">Select Amount</label>
+              <div class="grid grid-cols-4 gap-3 mb-3" id="amount-grid">
+                <button class="amount-btn py-3 rounded-xl border border-gray-200 text-sm font-semibold text-gray-700 hover:border-ocean-300 transition" data-amount="25">$25</button>
+                <button class="amount-btn py-3 rounded-xl border border-gray-200 text-sm font-semibold text-gray-700 hover:border-ocean-300 transition ring-2 ring-ocean-500 bg-ocean-50" data-amount="35">$35</button>
+                <button class="amount-btn py-3 rounded-xl border border-gray-200 text-sm font-semibold text-gray-700 hover:border-ocean-300 transition" data-amount="50">$50</button>
+                <button class="amount-btn py-3 rounded-xl border border-gray-200 text-sm font-semibold text-gray-700 hover:border-ocean-300 transition" data-amount="100">$100</button>
+              </div>
+              <input type="number" placeholder="Custom amount" class="form-input" id="custom-amount" />
+            </div>
+
+            <!-- Designate -->
+            <div class="mb-6">
+              <label class="block text-sm font-medium text-gray-700 mb-2">Designate your gift</label>
+              <select class="form-input">
+                <option>Where most needed</option>
+                <option>Education & Scholarships</option>
+                <option>Youth Mentorship (YUMP)</option>
+                <option>Holiday Camps</option>
+                <option>Digital Literacy</option>
+                <option>Healing & Expression</option>
+                <option>Community Development</option>
+              </select>
+            </div>
+
+            <!-- Personal Info -->
+            <div class="mb-6 space-y-4">
+              <h3 class="text-lg font-semibold text-gray-900">Your Information</h3>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <input type="text" placeholder="First name" class="form-input" required />
+                <input type="text" placeholder="Last name" class="form-input" required />
+              </div>
+              <input type="email" placeholder="Email address" class="form-input" required />
+            </div>
+
+            <!-- Dedicate -->
+            <div class="mb-8 p-4 bg-warm-50 rounded-2xl border border-gray-100">
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="w-5 h-5 rounded border-gray-300 text-ocean-600 focus:ring-ocean-500" />
+                <span class="text-sm text-gray-600">Dedicate this gift in honor or memory of someone</span>
+              </label>
+            </div>
+
+            <button class="w-full py-4 bg-gold-400 text-gray-900 rounded-2xl font-semibold text-lg hover:bg-gold-300 transition shadow-lg shadow-gold-400/20" onclick="this.textContent='Thank You! Gift Received'; this.disabled=true; this.classList.add('bg-sage-500','text-white','shadow-sage-500/20'); this.classList.remove('bg-gold-400','shadow-gold-400/20','hover:bg-gold-300');">
+              Complete Donation
+            </button>
+            <p class="text-center text-xs text-gray-400 mt-4">Secure, encrypted donation. Tax-deductible receipt emailed instantly.</p>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-2 space-y-6">
+          <!-- Impact Preview -->
+          <div class="bg-white rounded-3xl p-6 border border-gray-100 shadow-lg">
+            <h3 class="font-semibold text-gray-900 mb-4">Your Impact</h3>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 bg-ocean-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span class="text-ocean-600 font-bold text-xs">$25</span>
+                </div>
+                <p class="text-sm text-gray-500">Provides school supplies for one child for a full term</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 bg-gold-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span class="text-gold-600 font-bold text-xs">$35</span>
+                </div>
+                <p class="text-sm text-gray-500">Sponsors one child for a month — education, health, mentorship</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 bg-sage-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span class="text-sage-600 font-bold text-xs">$50</span>
+                </div>
+                <p class="text-sm text-gray-500">Funds a full Chapati JOY Festival for 30+ children</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 bg-warm-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span class="text-warm-700 font-bold text-xs">$100</span>
+                </div>
+                <p class="text-sm text-gray-500">Equips the computer lab with learning software for 50 students</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trust -->
+          <div class="bg-white rounded-3xl p-6 border border-gray-100 shadow-lg">
+            <h3 class="font-semibold text-gray-900 mb-4">Transparency Promise</h3>
+            <div class="space-y-3">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-sage-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <p class="text-sm text-gray-500">94% of funds go directly to programs</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-sage-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <p class="text-sm text-gray-500">Annual financial reports published</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-sage-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <p class="text-sm text-gray-500">Registered nonprofit in Germany (e.V.)</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-sage-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <p class="text-sm text-gray-500">Tax-deductible donations</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quote -->
+          <div class="bg-gradient-to-br from-ocean-700 to-ocean-800 rounded-3xl p-6 text-white">
+            <p class="italic text-white/80 leading-relaxed mb-4">"The best way to find yourself is to lose yourself in the service of others."</p>
+            <p class="text-white/50 text-sm">— Mahatma Gandhi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white/60 py-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center"><span class="text-white font-bold text-sm">B+</span></div>
+        <span class="font-serif font-bold text-white">BetterMe<span class="text-gold-400">+</span></span>
+      </div>
+      <p class="text-xs">&copy; 2026 BetterMe+ e.V. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Amount selection
+    document.querySelectorAll('.amount-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('ring-2','ring-ocean-500','bg-ocean-50'));
+        btn.classList.add('ring-2','ring-ocean-500','bg-ocean-50');
+        document.getElementById('custom-amount').value = '';
+      });
+    });
+    document.getElementById('custom-amount').addEventListener('focus', () => {
+      document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('ring-2','ring-ocean-500','bg-ocean-50'));
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stories | BetterMe+</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          gold:{50:'#fff9e6',100:'#fff0b3',200:'#ffe680',300:'#fcdb4d',400:'#fcb711',500:'#e5a200',600:'#b37e00'},
+          ocean:{50:'#e6f2fa',100:'#b3d9f0',200:'#80bfe6',300:'#4da6dc',400:'#1a8cd2',500:'#025ca7',600:'#024a86',700:'#013764',800:'#012543',900:'#001221'},
+          warm:{50:'#fdf8f3',100:'#f9ede0',200:'#f3dbc1'},
+          sage:{50:'#f0f5f0',100:'#d9e8d9',500:'#4a8c4a',600:'#3b703b'},
+        },
+        fontFamily: { sans:['Inter','system-ui','sans-serif'], serif:['Playfair Display','Georgia','serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="bg-warm-50 text-gray-800 font-sans antialiased">
+
+  <!-- Nav -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 scrolled">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-lg"><span class="text-white font-bold text-lg">B+</span></div>
+        <span class="font-serif font-bold text-xl text-white">BetterMe<span class="text-gold-400">+</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="../index.html#programs" class="text-sm font-medium text-white/80 hover:text-gold-400 transition">Programs</a>
+        <a href="sponsor.html" class="text-sm font-medium text-white/80 hover:text-gold-400 transition">Sponsor a Child</a>
+        <a href="community.html" class="text-sm font-medium text-white/80 hover:text-gold-400 transition">Community Impact</a>
+        <a href="volunteer.html" class="text-sm font-medium text-white/80 hover:text-gold-400 transition">Volunteer</a>
+        <a href="stories.html" class="text-sm font-medium text-gold-400">Stories</a>
+        <a href="donate.html" class="px-5 py-2.5 bg-gold-400 text-gray-900 rounded-full text-sm font-semibold hover:bg-gold-300 transition shadow-lg shadow-gold-400/25">Donate Now</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden text-white"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-ocean-800/95 backdrop-blur-xl border-t border-white/10">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="../index.html#programs" class="text-white/80 py-2">Programs</a>
+        <a href="sponsor.html" class="text-white/80 py-2">Sponsor a Child</a>
+        <a href="community.html" class="text-white/80 py-2">Community Impact</a>
+        <a href="volunteer.html" class="text-white/80 py-2">Volunteer</a>
+        <a href="stories.html" class="text-gold-400 py-2">Stories</a>
+        <a href="donate.html" class="text-center px-5 py-2.5 bg-gold-400 text-gray-900 rounded-full font-semibold">Donate Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="page-header pt-32 pb-20">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <p class="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-3">Real Lives, Real Change</p>
+      <h1 class="text-4xl lg:text-6xl font-serif font-bold text-white mb-4">Stories of Transformation</h1>
+      <p class="text-white/60 text-lg max-w-2xl">Every child has a story. Every sponsor creates a new chapter. Read about the lives being changed through BetterMe+.</p>
+    </div>
+  </section>
+
+  <!-- Featured Story -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="bg-warm-50 rounded-3xl overflow-hidden border border-gray-100 shadow-xl">
+        <div class="grid md:grid-cols-2">
+          <div class="h-64 md:h-auto bg-gradient-to-br from-ocean-300 to-ocean-600 relative">
+            <div class="absolute inset-0" style="background-image:url('https://images.unsplash.com/photo-1529390079861-591de354faf5?w=800&q=80');background-size:cover;background-position:center;"></div>
+            <div class="absolute top-4 left-4 px-3 py-1 bg-gold-400 text-gray-900 rounded-full text-xs font-bold">Featured Story</div>
+          </div>
+          <div class="p-8 md:p-12 flex flex-col justify-center">
+            <p class="text-gold-500 font-semibold text-sm uppercase tracking-widest mb-2">Alumni Spotlight</p>
+            <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">From Sponsored Child to University Graduate</h2>
+            <p class="text-gray-500 leading-relaxed mb-6">"I joined BetterMe+ when I was 11. I had no school fees, no hope. My sponsor believed in me before I believed in myself. Today, I have a degree in education and I mentor the next generation through YUMP. The cycle of poverty stops with me."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-ocean-100 flex items-center justify-center"><span class="text-ocean-600 font-bold">JW</span></div>
+              <div>
+                <p class="font-semibold text-gray-900">Joseph Wanjala</p>
+                <p class="text-gray-400 text-sm">BetterMe+ Alumni, Class of 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stories Grid -->
+  <section class="py-16 bg-warm-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Story 1 -->
+        <article class="bg-white rounded-3xl overflow-hidden border border-gray-100 card-lift">
+          <div class="h-48 bg-gradient-to-br from-gold-200 to-gold-400 relative">
+            <div class="absolute inset-0" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=80');background-size:cover;background-position:center;"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex gap-2 mb-3">
+              <span class="px-2 py-0.5 bg-ocean-50 text-ocean-600 rounded text-xs font-medium">Education</span>
+              <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded text-xs font-medium">2025</span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Grace's Journey to Top of Her Class</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">When Grace joined our program, she couldn't read. Two years later, she's the top student in her school and dreams of becoming a teacher.</p>
+            <a href="#" class="text-ocean-600 font-medium text-sm inline-flex items-center gap-1 hover:text-ocean-700 transition">Read full story <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Story 2 -->
+        <article class="bg-white rounded-3xl overflow-hidden border border-gray-100 card-lift">
+          <div class="h-48 bg-gradient-to-br from-sage-200 to-sage-400 relative">
+            <div class="absolute inset-0" style="background-image:url('https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=400&q=80');background-size:cover;background-position:center;"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex gap-2 mb-3">
+              <span class="px-2 py-0.5 bg-sage-50 text-sage-600 rounded text-xs font-medium">Holiday Camp</span>
+              <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded text-xs font-medium">2025</span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">How a Holiday Camp Changed Samuel's Life</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">Samuel was shy and withdrawn. After three Beyond School camps, he became a peer mentor and now leads activities for younger children.</p>
+            <a href="#" class="text-ocean-600 font-medium text-sm inline-flex items-center gap-1 hover:text-ocean-700 transition">Read full story <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Story 3 -->
+        <article class="bg-white rounded-3xl overflow-hidden border border-gray-100 card-lift">
+          <div class="h-48 bg-gradient-to-br from-ocean-200 to-ocean-400 relative">
+            <div class="absolute inset-0" style="background-image:url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&q=80');background-size:cover;background-position:center;"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex gap-2 mb-3">
+              <span class="px-2 py-0.5 bg-gold-50 text-gold-600 rounded text-xs font-medium">Sponsorship</span>
+              <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded text-xs font-medium">2024</span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">A Sponsor's First Visit to Kenya</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">"Meeting the child I had been writing to for 3 years was the most emotional day of my life. We cried, laughed, and shared chapati together."</p>
+            <a href="#" class="text-ocean-600 font-medium text-sm inline-flex items-center gap-1 hover:text-ocean-700 transition">Read full story <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Story 4 -->
+        <article class="bg-white rounded-3xl overflow-hidden border border-gray-100 card-lift">
+          <div class="h-48 bg-gradient-to-br from-warm-200 to-warm-400 relative">
+            <div class="absolute inset-0" style="background-image:url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=400&q=80');background-size:cover;background-position:center;"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex gap-2 mb-3">
+              <span class="px-2 py-0.5 bg-ocean-50 text-ocean-600 rounded text-xs font-medium">Healing</span>
+              <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded text-xs font-medium">2024</span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Finding Voice Through Art Therapy</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">Mercy used painting to process the loss of her parents. Through our healing program, she found her voice and now teaches art to other children.</p>
+            <a href="#" class="text-ocean-600 font-medium text-sm inline-flex items-center gap-1 hover:text-ocean-700 transition">Read full story <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Story 5 -->
+        <article class="bg-white rounded-3xl overflow-hidden border border-gray-100 card-lift">
+          <div class="h-48 bg-gradient-to-br from-ocean-300 to-ocean-500 relative">
+            <div class="absolute inset-0" style="background-image:url('https://images.unsplash.com/photo-1527484500-5765e0cef578?w=400&q=80');background-size:cover;background-position:center;"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex gap-2 mb-3">
+              <span class="px-2 py-0.5 bg-sage-50 text-sage-600 rounded text-xs font-medium">Digital Skills</span>
+              <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded text-xs font-medium">2025</span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">From Zero to Code: Peter's Tech Journey</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">Peter had never touched a computer. After 6 months in our digital literacy program, he built his first website and won a local hackathon.</p>
+            <a href="#" class="text-ocean-600 font-medium text-sm inline-flex items-center gap-1 hover:text-ocean-700 transition">Read full story <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Story 6 -->
+        <article class="bg-white rounded-3xl overflow-hidden border border-gray-100 card-lift">
+          <div class="h-48 bg-gradient-to-br from-gold-300 to-gold-500 relative">
+            <div class="absolute inset-0" style="background-image:url('https://images.unsplash.com/photo-1504151932400-72d4384f04b3?w=400&q=80');background-size:cover;background-position:center;"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex gap-2 mb-3">
+              <span class="px-2 py-0.5 bg-gold-50 text-gold-600 rounded text-xs font-medium">Community</span>
+              <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded text-xs font-medium">2024</span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">The Chapati Festival That Changed a Village</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">What started as a single Chapati JOY Festival in Kisumu sparked a movement. Now the community hosts their own quarterly celebrations.</p>
+            <a href="#" class="text-ocean-600 font-medium text-sm inline-flex items-center gap-1 hover:text-ocean-700 transition">Read full story <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white/60 py-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center"><span class="text-white font-bold text-sm">B+</span></div>
+        <span class="font-serif font-bold text-white">BetterMe<span class="text-gold-400">+</span></span>
+      </div>
+      <p class="text-xs">&copy; 2026 BetterMe+ e.V. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

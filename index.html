@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BetterMe+ | A Better World Starts With You</title>
+  <meta name="description" content="Empowering vulnerable youth through education, mentorship, sponsorship, and community development." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: { 50:'#fff9e6', 100:'#fff0b3', 200:'#ffe680', 300:'#fcdb4d', 400:'#fcb711', 500:'#e5a200', 600:'#b37e00', 700:'#805a00', 800:'#4d3600', 900:'#1a1300' },
+            ocean: { 50:'#e6f2fa', 100:'#b3d9f0', 200:'#80bfe6', 300:'#4da6dc', 400:'#1a8cd2', 500:'#025ca7', 600:'#024a86', 700:'#013764', 800:'#012543', 900:'#001221' },
+            warm: { 50:'#fdf8f3', 100:'#f9ede0', 200:'#f3dbc1', 300:'#ecc9a2', 400:'#e6b783', 500:'#dfa564', 600:'#d89345', 700:'#c07e30', 800:'#9a6526', 900:'#744b1c' },
+            sage: { 50:'#f0f5f0', 100:'#d9e8d9', 200:'#b3d1b3', 300:'#8dba8d', 400:'#67a367', 500:'#4a8c4a', 600:'#3b703b', 700:'#2c542c', 800:'#1e381e', 900:'#0f1c0f' },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-warm-50 text-gray-800 font-sans antialiased">
+
+  <!-- Nav -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-lg">
+          <span class="text-white font-bold text-lg">B+</span>
+        </div>
+        <span class="font-serif font-bold text-xl text-white nav-brand">BetterMe<span class="text-gold-400">+</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#programs" class="nav-link text-sm font-medium text-white/80 hover:text-gold-400 transition">Programs</a>
+        <a href="pages/sponsor.html" class="nav-link text-sm font-medium text-white/80 hover:text-gold-400 transition">Sponsor a Child</a>
+        <a href="pages/community.html" class="nav-link text-sm font-medium text-white/80 hover:text-gold-400 transition">Community Impact</a>
+        <a href="pages/volunteer.html" class="nav-link text-sm font-medium text-white/80 hover:text-gold-400 transition">Volunteer</a>
+        <a href="pages/stories.html" class="nav-link text-sm font-medium text-white/80 hover:text-gold-400 transition">Stories</a>
+        <a href="pages/donate.html" class="px-5 py-2.5 bg-gold-400 text-gray-900 rounded-full text-sm font-semibold hover:bg-gold-300 transition shadow-lg shadow-gold-400/25">Donate Now</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-ocean-800/95 backdrop-blur-xl border-t border-white/10">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="#programs" class="text-white/80 hover:text-gold-400 py-2 transition">Programs</a>
+        <a href="pages/sponsor.html" class="text-white/80 hover:text-gold-400 py-2 transition">Sponsor a Child</a>
+        <a href="pages/community.html" class="text-white/80 hover:text-gold-400 py-2 transition">Community Impact</a>
+        <a href="pages/volunteer.html" class="text-white/80 hover:text-gold-400 py-2 transition">Volunteer</a>
+        <a href="pages/stories.html" class="text-white/80 hover:text-gold-400 py-2 transition">Stories</a>
+        <a href="pages/donate.html" class="inline-block text-center px-5 py-2.5 bg-gold-400 text-gray-900 rounded-full font-semibold">Donate Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative min-h-screen flex items-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-ocean-900 via-ocean-800 to-ocean-700"></div>
+    <div class="absolute inset-0 opacity-20" style="background-image: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1920&q=80'); background-size: cover; background-position: center;"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-ocean-900/80 via-transparent to-ocean-900/40"></div>
+    <!-- Floating orbs -->
+    <div class="absolute top-20 left-10 w-72 h-72 bg-gold-400/10 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-ocean-400/10 rounded-full blur-3xl animate-float-delayed"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 py-32 grid lg:grid-cols-2 gap-16 items-center">
+      <div class="space-y-8">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/10">
+          <span class="w-2 h-2 bg-gold-400 rounded-full animate-pulse"></span>
+          <span class="text-white/80 text-sm">2,400+ lives transformed since 2018</span>
+        </div>
+        <h1 class="text-5xl lg:text-7xl font-serif font-bold text-white leading-tight">
+          A Better World<br/>
+          <span class="bg-gradient-to-r from-gold-300 to-gold-500 bg-clip-text text-transparent">Starts With You</span>
+        </h1>
+        <p class="text-lg text-white/70 max-w-lg leading-relaxed">
+          Empowering vulnerable Kenyan youth through education, mentorship, and one-to-one sponsorship — building futures that last generations.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="pages/sponsor.html" class="group px-8 py-4 bg-gold-400 text-gray-900 rounded-full font-semibold text-lg hover:bg-gold-300 transition shadow-2xl shadow-gold-400/30 flex items-center gap-2">
+            Sponsor a Child
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+          <a href="#programs" class="px-8 py-4 border border-white/20 text-white rounded-full font-medium text-lg hover:bg-white/10 transition backdrop-blur-sm">
+            Our Programs
+          </a>
+        </div>
+        <!-- Trust bar -->
+        <div class="flex items-center gap-8 pt-4">
+          <div class="text-center">
+            <p class="text-3xl font-bold text-white">136+</p>
+            <p class="text-white/50 text-xs uppercase tracking-wider">Youth Supported</p>
+          </div>
+          <div class="w-px h-10 bg-white/20"></div>
+          <div class="text-center">
+            <p class="text-3xl font-bold text-white">5</p>
+            <p class="text-white/50 text-xs uppercase tracking-wider">Programs</p>
+          </div>
+          <div class="w-px h-10 bg-white/20"></div>
+          <div class="text-center">
+            <p class="text-3xl font-bold text-white">8+</p>
+            <p class="text-white/50 text-xs uppercase tracking-wider">Years Active</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero card -->
+      <div class="hidden lg:block">
+        <div class="relative">
+          <div class="absolute -inset-4 bg-gradient-to-r from-gold-400/20 to-ocean-400/20 rounded-3xl blur-2xl"></div>
+          <div class="relative bg-white/10 backdrop-blur-xl rounded-3xl border border-white/10 p-8 space-y-6">
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-400 to-warm-500 flex items-center justify-center">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              </div>
+              <div>
+                <p class="text-white font-semibold text-lg">Amara, Age 12</p>
+                <p class="text-white/60 text-sm">Kisumu, Kenya</p>
+              </div>
+            </div>
+            <p class="text-white/80 italic leading-relaxed">"Because of my sponsor, I can go to school every day. I want to become a doctor and help my community."</p>
+            <div class="grid grid-cols-3 gap-3">
+              <div class="bg-white/5 rounded-xl p-3 text-center">
+                <p class="text-gold-400 font-bold">3 yrs</p>
+                <p class="text-white/50 text-xs">Sponsored</p>
+              </div>
+              <div class="bg-white/5 rounded-xl p-3 text-center">
+                <p class="text-gold-400 font-bold">Top 5</p>
+                <p class="text-white/50 text-xs">In Class</p>
+              </div>
+              <div class="bg-white/5 rounded-xl p-3 text-center">
+                <p class="text-gold-400 font-bold">14</p>
+                <p class="text-white/50 text-xs">Letters Sent</p>
+              </div>
+            </div>
+            <a href="pages/sponsor.html" class="block text-center py-3 bg-white/10 hover:bg-white/20 border border-white/10 rounded-xl text-white font-medium transition">
+              Meet More Children →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+        <div class="w-1.5 h-3 bg-white/50 rounded-full mt-2 animate-scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works (Compassion-inspired) -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-20">
+        <p class="text-gold-500 font-semibold text-sm uppercase tracking-widest mb-3">How It Works</p>
+        <h2 class="text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-4">Change a Life in<br/><span class="text-ocean-600">Three Simple Steps</span></h2>
+        <p class="text-gray-500 text-lg">Inspired by the world's most trusted child sponsorship models, made personal.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div class="group relative">
+          <div class="absolute -inset-1 bg-gradient-to-r from-gold-200 to-gold-100 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity blur-xl"></div>
+          <div class="relative bg-warm-50 rounded-3xl p-8 border border-gray-100 hover:border-gold-200 transition-all hover:-translate-y-1">
+            <div class="w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-gold-400/20">
+              <span class="text-white font-bold text-xl">1</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Choose a Child</h3>
+            <p class="text-gray-500 leading-relaxed">Browse profiles of children waiting for a sponsor. See their story, dreams, and how your support will help them thrive.</p>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="group relative">
+          <div class="absolute -inset-1 bg-gradient-to-r from-ocean-200 to-ocean-100 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity blur-xl"></div>
+          <div class="relative bg-warm-50 rounded-3xl p-8 border border-gray-100 hover:border-ocean-200 transition-all hover:-translate-y-1">
+            <div class="w-14 h-14 bg-gradient-to-br from-ocean-500 to-ocean-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-ocean-500/20">
+              <span class="text-white font-bold text-xl">2</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Build a Bond</h3>
+            <p class="text-gray-500 leading-relaxed">Exchange letters, receive progress updates, photos, and annual impact reports. Watch your child grow year after year.</p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="group relative">
+          <div class="absolute -inset-1 bg-gradient-to-r from-sage-200 to-sage-100 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity blur-xl"></div>
+          <div class="relative bg-warm-50 rounded-3xl p-8 border border-gray-100 hover:border-sage-200 transition-all hover:-translate-y-1">
+            <div class="w-14 h-14 bg-gradient-to-br from-sage-500 to-sage-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-sage-500/20">
+              <span class="text-white font-bold text-xl">3</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">See the Impact</h3>
+            <p class="text-gray-500 leading-relaxed">Track real community transformation. Your sponsorship funds education, health, clean water — lifting entire communities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs (BetterMe core) -->
+  <section id="programs" class="py-24 bg-warm-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-20">
+        <p class="text-gold-500 font-semibold text-sm uppercase tracking-widest mb-3">What We Do</p>
+        <h2 class="text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-4">Programs That<br/><span class="text-ocean-600">Transform Lives</span></h2>
+        <p class="text-gray-500 text-lg">Holistic support addressing education, mental health, life skills, and community strength.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- YUMP -->
+        <div class="group bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-2xl hover:shadow-ocean-500/5 transition-all duration-500 hover:-translate-y-1">
+          <div class="h-48 bg-gradient-to-br from-ocean-600 to-ocean-800 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image: url('https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&q=80'); background-size: cover;"></div>
+            <svg class="w-16 h-16 text-white/80 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </div>
+          <div class="p-6">
+            <div class="inline-block px-3 py-1 bg-ocean-50 text-ocean-600 rounded-full text-xs font-semibold mb-3">Mentorship</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Youth Unleashed Mentorship</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">Supporting high-school youth with emotional wellness through group sessions and individual counseling.</p>
+            <a href="#" class="text-ocean-600 font-medium text-sm hover:text-ocean-700 transition inline-flex items-center gap-1">
+              Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Education & Scholarships -->
+        <div class="group bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-2xl hover:shadow-gold-500/5 transition-all duration-500 hover:-translate-y-1">
+          <div class="h-48 bg-gradient-to-br from-gold-500 to-warm-600 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80'); background-size: cover;"></div>
+            <svg class="w-16 h-16 text-white/80 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <div class="p-6">
+            <div class="inline-block px-3 py-1 bg-gold-50 text-gold-600 rounded-full text-xs font-semibold mb-3">Education</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Scholarships & Tutoring</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">Providing scholarships, emotional support, social support, and tutoring for 136+ youth across Kenya.</p>
+            <a href="#" class="text-gold-600 font-medium text-sm hover:text-gold-700 transition inline-flex items-center gap-1">
+              Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Holiday Camps -->
+        <div class="group bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-2xl hover:shadow-sage-500/5 transition-all duration-500 hover:-translate-y-1">
+          <div class="h-48 bg-gradient-to-br from-sage-500 to-sage-700 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image: url('https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600&q=80'); background-size: cover;"></div>
+            <svg class="w-16 h-16 text-white/80 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div class="p-6">
+            <div class="inline-block px-3 py-1 bg-sage-50 text-sage-600 rounded-full text-xs font-semibold mb-3">Life Skills</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Beyond School Camps</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">Holiday camps where children connect, play, and develop critical soft skills and life skills in a safe space.</p>
+            <a href="#" class="text-sage-600 font-medium text-sm hover:text-sage-700 transition inline-flex items-center gap-1">
+              Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Chapati JOY -->
+        <div class="group bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-2xl hover:shadow-warm-500/5 transition-all duration-500 hover:-translate-y-1">
+          <div class="h-48 bg-gradient-to-br from-warm-500 to-warm-700 flex items-center justify-center relative overflow-hidden">
+            <svg class="w-16 h-16 text-white/80 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+          </div>
+          <div class="p-6">
+            <div class="inline-block px-3 py-1 bg-warm-50 text-warm-700 rounded-full text-xs font-semibold mb-3">Community</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Chapati JOY Festivals</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">One-day events that uplift, inspire, and share love with children in institutions across communities.</p>
+            <a href="#" class="text-warm-600 font-medium text-sm hover:text-warm-700 transition inline-flex items-center gap-1">
+              Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Digital Literacy -->
+        <div class="group bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-2xl hover:shadow-ocean-500/5 transition-all duration-500 hover:-translate-y-1">
+          <div class="h-48 bg-gradient-to-br from-ocean-400 to-ocean-600 flex items-center justify-center relative overflow-hidden">
+            <svg class="w-16 h-16 text-white/80 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="p-6">
+            <div class="inline-block px-3 py-1 bg-ocean-50 text-ocean-600 rounded-full text-xs font-semibold mb-3">Technology</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Digital Literacy</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">Computer education at the Korando Educational Center — equipping youth with essential tech skills for the future.</p>
+            <a href="#" class="text-ocean-600 font-medium text-sm hover:text-ocean-700 transition inline-flex items-center gap-1">
+              Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Healing & Expression -->
+        <div class="group bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-2xl hover:shadow-gold-500/5 transition-all duration-500 hover:-translate-y-1">
+          <div class="h-48 bg-gradient-to-br from-gold-400 to-warm-500 flex items-center justify-center relative overflow-hidden">
+            <svg class="w-16 h-16 text-white/80 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <div class="p-6">
+            <div class="inline-block px-3 py-1 bg-gold-50 text-gold-600 rounded-full text-xs font-semibold mb-3">Wellness</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Healing & Expression</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">Safe spaces for youth to release trauma, heal relationships, and develop tools to move beyond stress and fear.</p>
+            <a href="#" class="text-gold-600 font-medium text-sm hover:text-gold-700 transition inline-flex items-center gap-1">
+              Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Tracker (World Vision inspired) -->
+  <section class="py-24 bg-gradient-to-br from-ocean-800 to-ocean-900 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <p class="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-3">Community Impact</p>
+        <h2 class="text-4xl lg:text-5xl font-serif font-bold text-white mb-4">Your Sponsorship<br/><span class="text-gold-400">Transforms Communities</span></h2>
+        <p class="text-white/60 text-lg">We don't just sponsor children — we strengthen entire communities so progress lasts long after we leave.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 text-center hover:bg-white/10 transition">
+          <div class="text-5xl font-bold text-gold-400 mb-2 counter" data-target="136">0</div>
+          <p class="text-white/50 text-sm uppercase tracking-wider">Children Sponsored</p>
+          <div class="mt-4 w-full bg-white/10 rounded-full h-1.5"><div class="bg-gold-400 h-1.5 rounded-full" style="width:68%"></div></div>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 text-center hover:bg-white/10 transition">
+          <div class="text-5xl font-bold text-gold-400 mb-2 counter" data-target="12">0</div>
+          <p class="text-white/50 text-sm uppercase tracking-wider">Communities Reached</p>
+          <div class="mt-4 w-full bg-white/10 rounded-full h-1.5"><div class="bg-ocean-400 h-1.5 rounded-full" style="width:48%"></div></div>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 text-center hover:bg-white/10 transition">
+          <div class="text-5xl font-bold text-gold-400 mb-2 counter" data-target="94">0</div>
+          <p class="text-white/50 text-sm uppercase tracking-wider">% Funds to Programs</p>
+          <div class="mt-4 w-full bg-white/10 rounded-full h-1.5"><div class="bg-sage-400 h-1.5 rounded-full" style="width:94%"></div></div>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 text-center hover:bg-white/10 transition">
+          <div class="text-5xl font-bold text-gold-400 mb-2 counter" data-target="2400">0</div>
+          <p class="text-white/50 text-sm uppercase tracking-wider">Lives Impacted</p>
+          <div class="mt-4 w-full bg-white/10 rounded-full h-1.5"><div class="bg-warm-400 h-1.5 rounded-full" style="width:85%"></div></div>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center">
+        <a href="pages/community.html" class="inline-flex items-center gap-2 px-8 py-4 bg-white/10 border border-white/20 text-white rounded-full font-medium hover:bg-white/20 transition backdrop-blur-sm">
+          View Full Impact Report
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsor CTA (Compassion-inspired profiles) -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <p class="text-gold-500 font-semibold text-sm uppercase tracking-widest mb-3">Sponsor a Child</p>
+        <h2 class="text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-4">Children Waiting<br/><span class="text-ocean-600">For Someone Like You</span></h2>
+        <p class="text-gray-500 text-lg">For $35/month, you can change a child's entire future. Choose a child and start a life-changing bond today.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Child Card 1 -->
+        <div class="group bg-warm-50 rounded-3xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
+          <div class="h-64 bg-gradient-to-br from-ocean-200 to-ocean-400 relative overflow-hidden">
+            <div class="absolute inset-0" style="background-image: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&q=80'); background-size: cover; background-position: center top;"></div>
+            <div class="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-ocean-600">Waiting for Sponsor</div>
+          </div>
+          <div class="p-6 space-y-4">
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">James Odhiambo</h3>
+              <p class="text-gray-400 text-sm">Age 10 · Kisumu, Kenya</p>
+            </div>
+            <p class="text-gray-500 text-sm leading-relaxed">James loves science and dreams of becoming an engineer. He lives with his grandmother and needs support for school fees.</p>
+            <div class="flex items-center justify-between pt-2">
+              <p class="text-2xl font-bold text-ocean-600">$35<span class="text-sm text-gray-400 font-normal">/month</span></p>
+              <a href="pages/sponsor.html" class="px-5 py-2.5 bg-ocean-600 text-white rounded-full text-sm font-semibold hover:bg-ocean-700 transition shadow-lg shadow-ocean-600/20">Sponsor James</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Child Card 2 -->
+        <div class="group bg-warm-50 rounded-3xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
+          <div class="h-64 bg-gradient-to-br from-warm-200 to-warm-400 relative overflow-hidden">
+            <div class="absolute inset-0" style="background-image: url('https://images.unsplash.com/photo-1504151932400-72d4384f04b3?w=400&q=80'); background-size: cover; background-position: center top;"></div>
+            <div class="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-ocean-600">Waiting for Sponsor</div>
+          </div>
+          <div class="p-6 space-y-4">
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">Faith Akinyi</h3>
+              <p class="text-gray-400 text-sm">Age 8 · Nairobi, Kenya</p>
+            </div>
+            <p class="text-gray-500 text-sm leading-relaxed">Faith is a talented artist who loves to paint. She needs a sponsor to help her stay in school and pursue her creative gifts.</p>
+            <div class="flex items-center justify-between pt-2">
+              <p class="text-2xl font-bold text-ocean-600">$35<span class="text-sm text-gray-400 font-normal">/month</span></p>
+              <a href="pages/sponsor.html" class="px-5 py-2.5 bg-ocean-600 text-white rounded-full text-sm font-semibold hover:bg-ocean-700 transition shadow-lg shadow-ocean-600/20">Sponsor Faith</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Child Card 3 -->
+        <div class="group bg-warm-50 rounded-3xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
+          <div class="h-64 bg-gradient-to-br from-sage-200 to-sage-400 relative overflow-hidden">
+            <div class="absolute inset-0" style="background-image: url('https://images.unsplash.com/photo-1506869640319-fe1a24fd76cb?w=400&q=80'); background-size: cover; background-position: center top;"></div>
+            <div class="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-ocean-600">Waiting for Sponsor</div>
+          </div>
+          <div class="p-6 space-y-4">
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">Daniel Kipchoge</h3>
+              <p class="text-gray-400 text-sm">Age 12 · Eldoret, Kenya</p>
+            </div>
+            <p class="text-gray-500 text-sm leading-relaxed">Daniel is passionate about running and mathematics. His family struggles to pay for school, books, and proper nutrition.</p>
+            <div class="flex items-center justify-between pt-2">
+              <p class="text-2xl font-bold text-ocean-600">$35<span class="text-sm text-gray-400 font-normal">/month</span></p>
+              <a href="pages/sponsor.html" class="px-5 py-2.5 bg-ocean-600 text-white rounded-full text-sm font-semibold hover:bg-ocean-700 transition shadow-lg shadow-ocean-600/20">Sponsor Daniel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="pages/sponsor.html" class="text-ocean-600 font-semibold hover:text-ocean-700 transition inline-flex items-center gap-2">
+          View all children waiting for sponsors
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Letter Writing Feature (Compassion-inspired) -->
+  <section class="py-24 bg-warm-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-gold-500 font-semibold text-sm uppercase tracking-widest mb-3">Stay Connected</p>
+          <h2 class="text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-6">Write Letters.<br/><span class="text-ocean-600">Change Hearts.</span></h2>
+          <p class="text-gray-500 text-lg leading-relaxed mb-8">Your words mean the world. Every letter you write is treasured — kept in a special box, re-read dozens of times, and shared with pride. Build a real relationship across continents.</p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-gold-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-5 h-5 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Write Online or By Hand</h4>
+                <p class="text-gray-500 text-sm">Use our portal or send a handwritten letter — children love seeing your handwriting.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-ocean-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-5 h-5 text-ocean-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Receive Photos & Updates</h4>
+                <p class="text-gray-500 text-sm">Get progress reports, photos, drawings, and annual impact summaries from your sponsored child.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-sage-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-5 h-5 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Track Their Journey</h4>
+                <p class="text-gray-500 text-sm">Follow your child's milestones from enrollment through graduation. See their growth year after year.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Letter mockup -->
+        <div class="relative">
+          <div class="absolute -inset-4 bg-gradient-to-r from-gold-200/50 to-ocean-200/50 rounded-3xl blur-2xl"></div>
+          <div class="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-100 transform rotate-1 hover:rotate-0 transition-transform duration-500">
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
+              <div class="w-10 h-10 rounded-full bg-ocean-100 flex items-center justify-center">
+                <span class="text-ocean-600 font-bold text-sm">AK</span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900 text-sm">Letter from Amara K.</p>
+                <p class="text-gray-400 text-xs">Received March 15, 2026</p>
+              </div>
+            </div>
+            <div class="space-y-3 font-serif text-gray-600 italic leading-relaxed">
+              <p>Dear Sponsor,</p>
+              <p>Thank you so much for your support. I am doing well in school and I got position 3 in my class last term! My favorite subject is science.</p>
+              <p>I drew a picture of a butterfly for you. I hope you like it. My teacher says I am very good at art.</p>
+              <p>I pray for you every day. Thank you for helping me go to school.</p>
+              <p class="pt-2">With love,<br/>Amara</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+              <span class="text-xs text-gray-400">Letter #14 of 14</span>
+              <button class="px-4 py-2 bg-ocean-50 text-ocean-600 rounded-full text-xs font-semibold hover:bg-ocean-100 transition">Write Back</button>
+            </div>
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-gold-50 rounded-2xl p-4 shadow-lg border border-gold-100 transform -rotate-3">
+            <div class="flex items-center gap-2">
+              <svg class="w-8 h-8 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              <div>
+                <p class="text-gold-700 font-semibold text-sm">3 Years Together</p>
+                <p class="text-gold-500 text-xs">Sponsor Anniversary</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <p class="text-gold-500 font-semibold text-sm uppercase tracking-widest mb-3">Stories of Change</p>
+        <h2 class="text-4xl lg:text-5xl font-serif font-bold text-gray-900">Hear From Our<br/><span class="text-ocean-600">Community</span></h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-warm-50 rounded-3xl p-8 border border-gray-100">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-600 italic leading-relaxed mb-6">"Sponsoring Amara has been the most rewarding experience. Receiving her letters and seeing her grades improve each term brings me so much joy."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-ocean-100 flex items-center justify-center"><span class="text-ocean-600 font-semibold text-sm">SK</span></div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">Sarah K.</p>
+              <p class="text-gray-400 text-xs">Sponsor since 2022</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-warm-50 rounded-3xl p-8 border border-gray-100">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-600 italic leading-relaxed mb-6">"I volunteered at the holiday camp and it changed my life. The children's resilience and joy are truly inspiring. I came back a different person."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gold-100 flex items-center justify-center"><span class="text-gold-600 font-semibold text-sm">MR</span></div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">Michael R.</p>
+              <p class="text-gray-400 text-xs">Volunteer, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-warm-50 rounded-3xl p-8 border border-gray-100">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-600 italic leading-relaxed mb-6">"I was a sponsored child. Now I'm a university graduate and mentor in the YUMP program. BetterMe+ gave me everything — a future, a family, hope."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-sage-100 flex items-center justify-center"><span class="text-sage-600 font-semibold text-sm">JW</span></div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">Joseph W.</p>
+              <p class="text-gray-400 text-xs">Program Alumni & Mentor</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter / CTA -->
+  <section class="py-24 bg-gradient-to-br from-ocean-800 to-ocean-900 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-gold-400/10 rounded-full blur-3xl"></div>
+    <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+      <h2 class="text-4xl lg:text-5xl font-serif font-bold text-white mb-4">Ready to Make<br/><span class="text-gold-400">a Difference?</span></h2>
+      <p class="text-white/60 text-lg mb-10">Join thousands of sponsors and volunteers transforming lives in Kenya. Every action counts.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="pages/sponsor.html" class="px-8 py-4 bg-gold-400 text-gray-900 rounded-full font-semibold text-lg hover:bg-gold-300 transition shadow-2xl shadow-gold-400/30">
+          Sponsor a Child — $35/mo
+        </a>
+        <a href="pages/donate.html" class="px-8 py-4 border border-white/20 text-white rounded-full font-medium text-lg hover:bg-white/10 transition">
+          Make a One-Time Gift
+        </a>
+      </div>
+      <!-- Newsletter -->
+      <div class="mt-16 max-w-md mx-auto">
+        <p class="text-white/50 text-sm mb-4">Get monthly stories from the field</p>
+        <form class="flex gap-2" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed!'; this.querySelector('input').value='';">
+          <input type="email" placeholder="Your email address" class="flex-1 px-5 py-3 bg-white/10 border border-white/10 rounded-full text-white placeholder-white/40 focus:outline-none focus:border-gold-400/50 transition" />
+          <button type="submit" class="px-6 py-3 bg-white/10 border border-white/20 text-white rounded-full font-medium hover:bg-white/20 transition">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white/60 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+              <span class="text-white font-bold text-lg">B+</span>
+            </div>
+            <span class="font-serif font-bold text-xl text-white">BetterMe<span class="text-gold-400">+</span></span>
+          </div>
+          <p class="text-sm leading-relaxed">Empowering vulnerable Kenyan youth to unleash their full potential and create a better world for all.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-4">Programs</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-gold-400 transition">Youth Mentorship</a></li>
+            <li><a href="#" class="hover:text-gold-400 transition">Scholarships</a></li>
+            <li><a href="#" class="hover:text-gold-400 transition">Holiday Camps</a></li>
+            <li><a href="#" class="hover:text-gold-400 transition">Digital Literacy</a></li>
+            <li><a href="#" class="hover:text-gold-400 transition">Healing & Expression</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-4">Get Involved</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="pages/sponsor.html" class="hover:text-gold-400 transition">Sponsor a Child</a></li>
+            <li><a href="pages/donate.html" class="hover:text-gold-400 transition">Donate</a></li>
+            <li><a href="pages/volunteer.html" class="hover:text-gold-400 transition">Volunteer</a></li>
+            <li><a href="pages/community.html" class="hover:text-gold-400 transition">Impact Reports</a></li>
+            <li><a href="pages/stories.html" class="hover:text-gold-400 transition">Stories</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm">
+            <li>Kisumu, Kenya</li>
+            <li>info@bettermeplus.org</li>
+            <li>Registered e.V. (Germany)</li>
+          </ul>
+          <div class="flex gap-3 mt-4">
+            <a href="#" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold-400/20 transition">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+            </a>
+            <a href="#" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold-400/20 transition">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold-400/20 transition">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-xs">&copy; 2026 BetterMe+ e.V. All rights reserved.</p>
+        <div class="flex gap-6 text-xs">
+          <a href="#" class="hover:text-gold-400 transition">Privacy Policy</a>
+          <a href="#" class="hover:text-gold-400 transition">Terms of Service</a>
+          <a href="#" class="hover:text-gold-400 transition">Annual Report</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
