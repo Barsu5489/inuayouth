@@ -1,4 +1,4 @@
-// BetterMe+ — Main JS (Coffee-shop inspired interactions)
+// InuaYouth — Main JS (Coffee-shop inspired interactions)
 
 // Mobile menu
 const menuBtn = document.querySelector('#menu-btn');
