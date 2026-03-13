@@ -1048,6 +1048,11 @@ body {
   .home .row .content h3 { font-size: 3.5rem; }
   .home .row .content .stats { gap: 2rem; }
 
+  .home::before,
+  .home::after {
+    display: none;
+  }
+
   /* Hero image becomes background on small screens */
   .home .row .image {
     display: none;
