@@ -142,7 +142,7 @@ body {
   width: 50rem;
   object-fit: cover;
   animation: aboutImage 4s linear infinite;
-  border: var(--border);
+  border: .1rem solid var(--main);
 }
 .hero-cycle {
   position: absolute;
@@ -211,7 +211,7 @@ body {
   max-width: 50rem;
   object-fit: cover;
   animation: aboutImage 4s linear infinite;
-  border: var(--border);
+  border: .1rem solid var(--main);
   transition: opacity .4s ease;
 }
 @keyframes fade-up {
