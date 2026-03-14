@@ -1,4 +1,4 @@
-// InuaYouth — Main JS (Coffee-shop inspired interactions)
+// Dewo Ngima — Main JS (Coffee-shop inspired interactions)
 
 // Mobile menu
 const menuBtn = document.querySelector('#menu-btn');
